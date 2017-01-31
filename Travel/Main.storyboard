@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="i1p-ba-agc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--旅行-->
+        <scene sceneID="7sb-pd-tOB">
+            <objects>
+                <navigationController id="aVq-og-XA4" customClass="Nav1Controller" customModule="Travel" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="旅行" image="tab_travel" selectedImage="tab_travel" id="akD-fz-qCd"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="a9b-MR-4R8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OPI-1g-EPt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-887" y="931"/>
+        </scene>
+        <!--相识-->
+        <scene sceneID="DuW-do-eo4">
+            <objects>
+                <navigationController id="mLl-91-401" customClass="Nav2Controller" customModule="Travel" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" tag="1" title="相识" image="tab_friend" selectedImage="tab_friend" id="pPB-df-N5s"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Lmb-yO-QZT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tT1-FI-HH4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-206" y="931"/>
+        </scene>
+        <!--个人中心-->
+        <scene sceneID="jTU-Pu-cHc">
+            <objects>
+                <navigationController id="3fb-5a-pJy" customClass="Nav3Controller" customModule="Travel" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" tag="2" title="个人中心" image="tab_setting" id="rLc-jh-tvZ"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jBw-cx-n1c">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="77W-FS-yvo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="466" y="931"/>
+        </scene>
+        <!--Main Controller-->
+        <scene sceneID="piL-Xp-FXP">
+            <objects>
+                <tabBarController id="i1p-ba-agc" customClass="MainController" customModule="Travel" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="R62-rl-1G3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="aVq-og-XA4" kind="relationship" relationship="viewControllers" id="DiG-tf-1qi"/>
+                        <segue destination="mLl-91-401" kind="relationship" relationship="viewControllers" id="aIB-8p-Gt3"/>
+                        <segue destination="3fb-5a-pJy" kind="relationship" relationship="viewControllers" id="P9S-Ct-ZBj"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mv5-f1-1GM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-425" y="215"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tab_friend" width="25" height="25"/>
+        <image name="tab_setting" width="25" height="25"/>
+        <image name="tab_travel" width="25" height="25"/>
+    </resources>
+</document>

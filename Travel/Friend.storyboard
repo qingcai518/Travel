@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="l3n-3w-asd">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--寻觅旅伴-->
+        <scene sceneID="vbC-tt-hAe">
+            <objects>
+                <viewController id="l3n-3w-asd" customClass="FriendController" customModule="Travel" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="728-s1-Joz"/>
+                        <viewControllerLayoutGuide type="bottom" id="iwm-fm-Wtn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DYP-G9-Ke7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9SB-wF-35M">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="1" id="thz-vM-fiI">
+                                    <size key="itemSize" width="118" height="135"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FriendCell" id="hTL-eK-myj" customClass="FriendCell" customModule="Travel" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="118" height="135"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="118" height="135"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ybk-an-Mie">
+                                                    <rect key="frame" x="0.0" y="0.0" width="118" height="135"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="female" translatesAutoresizingMaskIntoConstraints="NO" id="hha-Es-chf">
+                                                    <rect key="frame" x="8" y="8" width="16" height="16"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="16" id="cQM-rP-n9y"/>
+                                                        <constraint firstAttribute="width" constant="16" id="kPS-NX-Kgn"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DLY-Ai-Xga">
+                                                    <rect key="frame" x="0.0" y="115" width="118" height="20"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="在路上" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ids-Ex-izK">
+                                                            <rect key="frame" x="16" y="0.0" width="86" height="20"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="Nxn-R2-bpb"/>
+                                                        <constraint firstAttribute="bottom" secondItem="ids-Ex-izK" secondAttribute="bottom" id="kdf-4w-SmC"/>
+                                                        <constraint firstItem="ids-Ex-izK" firstAttribute="leading" secondItem="DLY-Ai-Xga" secondAttribute="leading" constant="16" id="l3a-J9-smJ"/>
+                                                        <constraint firstAttribute="trailing" secondItem="ids-Ex-izK" secondAttribute="trailing" constant="16" id="lYl-8I-rKv"/>
+                                                        <constraint firstItem="ids-Ex-izK" firstAttribute="top" secondItem="DLY-Ai-Xga" secondAttribute="top" id="z5E-7N-M1r"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="DLY-Ai-Xga" secondAttribute="trailing" id="17V-TS-4Of"/>
+                                            <constraint firstItem="hha-Es-chf" firstAttribute="leading" secondItem="hTL-eK-myj" secondAttribute="leading" constant="8" id="8iB-pY-nSr"/>
+                                            <constraint firstItem="DLY-Ai-Xga" firstAttribute="leading" secondItem="hTL-eK-myj" secondAttribute="leading" id="EUv-pA-pCP"/>
+                                            <constraint firstAttribute="trailing" secondItem="ybk-an-Mie" secondAttribute="trailing" id="TW2-ha-xOh"/>
+                                            <constraint firstItem="ybk-an-Mie" firstAttribute="leading" secondItem="hTL-eK-myj" secondAttribute="leading" id="VpC-PQ-jXu"/>
+                                            <constraint firstItem="ybk-an-Mie" firstAttribute="top" secondItem="hTL-eK-myj" secondAttribute="top" id="WkG-dP-Qfr"/>
+                                            <constraint firstItem="hha-Es-chf" firstAttribute="top" secondItem="hTL-eK-myj" secondAttribute="top" constant="8" id="aMU-0i-qAU"/>
+                                            <constraint firstAttribute="bottom" secondItem="ybk-an-Mie" secondAttribute="bottom" id="shm-tJ-vet"/>
+                                            <constraint firstAttribute="bottom" secondItem="DLY-Ai-Xga" secondAttribute="bottom" id="xUc-iC-BVF"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="avatarView" destination="ybk-an-Mie" id="WY8-wh-Lf9"/>
+                                            <outlet property="genderView" destination="hha-Es-chf" id="VyO-XU-zou"/>
+                                            <outlet property="statusView" destination="DLY-Ai-Xga" id="QJ5-dZ-L6M"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9SB-wF-35M" firstAttribute="leading" secondItem="DYP-G9-Ke7" secondAttribute="leading" id="AmT-uN-yub"/>
+                            <constraint firstItem="9SB-wF-35M" firstAttribute="top" secondItem="DYP-G9-Ke7" secondAttribute="top" id="P6r-O9-hmz"/>
+                            <constraint firstAttribute="trailing" secondItem="9SB-wF-35M" secondAttribute="trailing" id="T3U-PC-rK5"/>
+                            <constraint firstAttribute="bottom" secondItem="9SB-wF-35M" secondAttribute="bottom" id="cxX-NX-gFZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="寻觅旅伴" id="vPS-rr-x7j">
+                        <barButtonItem key="rightBarButtonItem" style="done" id="udi-Cx-EDo">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="KVg-0N-FzS">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <state key="normal" title="筛选"/>
+                                <connections>
+                                    <action selector="showFilterContents" destination="l3n-3w-asd" eventType="touchUpInside" id="uSy-Mu-KG9"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="collectionView" destination="9SB-wF-35M" id="yr9-BA-UMe"/>
+                        <outlet property="filterBtn" destination="KVg-0N-FzS" id="C2J-jN-XRq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ncE-7S-fVP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="216.80000000000001" y="168.6656671664168"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="female" width="25" height="25"/>
+    </resources>
+</document>
