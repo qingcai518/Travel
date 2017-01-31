@@ -74,7 +74,7 @@ class TravelController: ViewController {
 
 extension TravelController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 234
+        return 232
     }
 }
 
