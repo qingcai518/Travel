@@ -22,4 +22,18 @@ let Male = "male"
 
 struct UDKey {
     static let LoginFlag = "LoginFlag"
+    static let FriendSearchType = "FriendSearchType"
+}
+
+enum FriendSearchType : Int {
+    case All = 0
+    case Female = 1
+    case Male = 2
+}
+
+enum SearchItemType: Int {
+    case KeywordTitle = 0
+    case PositionTitle = 1
+    case Keyword = 2
+    case Position = 3
 }

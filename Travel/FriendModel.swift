@@ -16,6 +16,28 @@ class FriendModel {
         return completion(nil)
     }
     
+    func getMoreFriendInfos(completion : (String?, _ isLatest: Bool) -> Void) {
+        let beforeCount = friendInfos.count
+        let info1 = FriendInfo(userId: 16, avatarUrl: BasicUrl + "kindergarten/child16", gender: Male, isTravelling: false)
+        let info2 = FriendInfo(userId: 17, avatarUrl: BasicUrl + "kindergarten/child17", gender: Female, isTravelling: false)
+        
+        addData(friendInfo: info1)
+        addData(friendInfo: info2)
+        
+        let afterCount = friendInfos.count
+        let isLatest = beforeCount == beforeCount
+        
+        return completion(nil, isLatest)
+    }
+    
+    private func addData(friendInfo: FriendInfo) {
+        if (!friendInfos.contains(where: { info -> Bool in
+            return friendInfo.userId == info.userId
+        })) {
+            friendInfos.append(friendInfo)
+        }
+    }
+    
     func getFemaleUsers(completion : (String?) -> Void) {
         addBasicData()
         
@@ -64,27 +86,35 @@ class FriendModel {
         let info13 = FriendInfo(userId: 13, avatarUrl: BasicUrl + "kindergarten/child13", gender: Male, isTravelling: true)
         let info14 = FriendInfo(userId: 14, avatarUrl: BasicUrl + "kindergarten/child14", gender: Female, isTravelling: false)
         let info15 = FriendInfo(userId: 15, avatarUrl: BasicUrl + "kindergarten/child15", gender: Female, isTravelling: false)
-        let info16 = FriendInfo(userId: 16, avatarUrl: BasicUrl + "kindergarten/child16", gender: Male, isTravelling: true)
-        let info17 = FriendInfo(userId: 17, avatarUrl: BasicUrl + "kindergarten/child17", gender: Female, isTravelling: false)
-        let info18 = FriendInfo(userId: 18, avatarUrl: BasicUrl + "kindergarten/child18", gender: Male, isTravelling: false)
         
-        friendInfos.append(info1)
-        friendInfos.append(info2)
-        friendInfos.append(info3)
-        friendInfos.append(info4)
-        friendInfos.append(info5)
-        friendInfos.append(info6)
-        friendInfos.append(info7)
-        friendInfos.append(info8)
-        friendInfos.append(info9)
-        friendInfos.append(info10)
-        friendInfos.append(info11)
-        friendInfos.append(info12)
-        friendInfos.append(info13)
-        friendInfos.append(info14)
-        friendInfos.append(info15)
-        friendInfos.append(info16)
-        friendInfos.append(info17)
-        friendInfos.append(info18)
+        let friendSearchType = UserDefaults.standard.integer(forKey: UDKey.FriendSearchType)
+        
+        if (friendSearchType == FriendSearchType.All.rawValue) {
+            friendInfos.append(info1)
+            friendInfos.append(info2)
+            friendInfos.append(info3)
+            friendInfos.append(info4)
+            friendInfos.append(info5)
+            friendInfos.append(info6)
+            friendInfos.append(info7)
+            friendInfos.append(info8)
+            friendInfos.append(info9)
+            friendInfos.append(info10)
+            friendInfos.append(info11)
+            friendInfos.append(info12)
+            friendInfos.append(info13)
+            friendInfos.append(info14)
+            friendInfos.append(info15)
+        } else if (friendSearchType == FriendSearchType.Female.rawValue) {
+            friendInfos.append(info1)
+            friendInfos.append(info5)
+            friendInfos.append(info7)
+            friendInfos.append(info10)
+            friendInfos.append(info11)
+            friendInfos.append(info12)
+            friendInfos.append(info13)
+        } else if (friendSearchType == FriendSearchType.Male.rawValue) {
+            friendInfos.append(info2)
+        }
     }
 }

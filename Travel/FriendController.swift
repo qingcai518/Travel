@@ -7,13 +7,16 @@
 //
 
 import UIKit
+import MJRefresh
 
 class FriendController: ViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var filterBtn: UIButton!
     
     let model = FriendModel()
-    
+    var header : MJRefreshGifHeader!
+    var footer : MJRefreshAutoNormalFooter!
+
     @IBAction func showFilterContents() {
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         let action1 = UIAlertAction(title: "只看女生", style: .default) { [weak self] action in
@@ -23,16 +26,8 @@ class FriendController: ViewController {
         let action2 = UIAlertAction(title: "只看男生", style: .default) { [weak self] action in
             self?.getMaleData()
         }
-        
-        let action3 = UIAlertAction(title: "旅途中", style: .default) { action in
-            
-        }
-        
-        let action4 = UIAlertAction(title: "正在募集", style: .default) { action in
-            print("募集中の旅を検索する.")
-        }
-        
-        let action5 = UIAlertAction(title: "全国", style: .default) { action in
+
+        let action3 = UIAlertAction(title: "全国", style: .default) { action in
             print("地域によってフィルタリングを行う.")
         }
         
@@ -41,8 +36,6 @@ class FriendController: ViewController {
         alertController.addAction(action1)
         alertController.addAction(action2)
         alertController.addAction(action3)
-        alertController.addAction(action4)
-        alertController.addAction(action5)
         alertController.addAction(cancelAction)
         
         self.present(alertController, animated: true, completion: nil)
@@ -52,6 +45,7 @@ class FriendController: ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setRefresh()
         setCollectionView()
         getData()
     }
@@ -60,13 +54,28 @@ class FriendController: ViewController {
         super.didReceiveMemoryWarning()
     }
     
+    private func setRefresh() {
+        // refresh用headerの設定.
+        header = MJRefreshGifHeader(refreshingTarget: self, refreshingAction: #selector(getData))
+        header.setImages(AppUtility.getIdleImages(), for: .idle)
+        header.setImages(AppUtility.getPullingImages(), for: .pulling)
+        header.setImages(AppUtility.getRefreshingImages(), for: .refreshing)
+        self.collectionView.mj_header = header
+        
+        // refresh用footerの設定.
+        footer = MJRefreshAutoNormalFooter(refreshingTarget: self, refreshingAction: #selector(getMoreData))
+        self.collectionView.mj_footer = footer
+    }
+    
     private func setCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
     }
-    
-    private func getData() {
+
+    func getData() {
         model.getFriendInfos { msg in
+            header.endRefreshing()
+            footer.isHidden = false
             if let errorMsg = msg {
                 print("error = \(errorMsg)")
             }
@@ -75,18 +84,10 @@ class FriendController: ViewController {
         }
     }
     
-    private func getFemaleData() {
-        model.getFemaleUsers { msg in
-            if let errorMsg = msg {
-                print("error = \(errorMsg)")
-            }
-            
-            collectionView.reloadData()
-        }
-    }
-    
-    private func getMaleData() {
-        model.getMaleUsers { msg in
+    func getMoreData() {
+        model.getMoreFriendInfos { (msg, isLatest) in
+            footer.endRefreshing()
+            footer.isHidden = isLatest
             if let errorMsg = msg {
                 print("error = \(errorMsg)")
             }

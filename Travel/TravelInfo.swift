@@ -9,7 +9,7 @@
 import Foundation
 
 class TravelInfo {
-    var travelId : Int
+    var travelId: Int
     var userId: Int
     var destination : String
     var departure: String
