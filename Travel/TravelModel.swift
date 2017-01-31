@@ -33,6 +33,7 @@ class TravelModel {
         
         let info10 = TravelInfo(travelId: 10, userId: 8, destination: "尼泊尔", departure: "深圳", travelDate: "2017年3月1日 10天", description: "结合志同道合的朋友，时间地点可以再商量", avatarUrl: BasicUrl + "kindergarten/child8", userName: "小梦", gender: Female, publishTime: "2天前", publishPlace: "发布于 深圳")
         
+        travelInfos.removeAll()
         travelInfos.append(info1)
         travelInfos.append(info2)
         travelInfos.append(info3)
@@ -45,5 +46,29 @@ class TravelModel {
         travelInfos.append(info10)
         
         return completion(nil)
+    }
+    
+    private func addInfo(travelInfo: TravelInfo) {
+        if (!travelInfos.contains(where: { info -> Bool in
+            return info.travelId == travelInfo.travelId
+        })) {
+            travelInfos.append(travelInfo)
+        }
+    }
+    
+    func getMoreTravelInfos(completion : (String?, _ isLastData: Bool) -> Void) {
+        let countBefore = travelInfos.count
+        
+        let info1 = TravelInfo(travelId: 11, userId: 11, destination: "东京", departure: "南京市", travelDate: "2017年1月28日 5天", description: "", avatarUrl: BasicUrl + "kindergarten/child11", userName: "夜不能寐", gender: Female, publishTime: "2016/10/28 14:52", publishPlace: "发布于 火星")
+        let info2 = TravelInfo(travelId: 12, userId: 12, destination: "京都", departure: "南京市", travelDate: "2017年1月28日 5天", description: "", avatarUrl: BasicUrl + "kindergarten/child12", userName: "我可能学到了假知识", gender: Male, publishTime: "2016/10/14 15:30", publishPlace: "发布于 火星")
+        let info3 = TravelInfo(travelId: 13, userId: 13, destination: "大阪", departure: "南京市", travelDate: "2017年1月28日 5天", description: "", avatarUrl: BasicUrl + "kindergarten/child13", userName: "天天向上", gender: Female, publishTime: "2016/9/1 12:03", publishPlace: "发布于 火星")
+        
+        addInfo(travelInfo: info1)
+        addInfo(travelInfo: info2)
+        addInfo(travelInfo: info3)
+        
+        let countAfter = travelInfos.count
+        let isLastData = countBefore == countAfter
+        return completion(nil, isLastData)
     }
 }

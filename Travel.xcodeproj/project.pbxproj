@@ -24,6 +24,9 @@
 		3C33001F1E3F2F6F00A6D1EE /* FriendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C33001E1E3F2F6F00A6D1EE /* FriendModel.swift */; };
 		3C3300211E3F2F7700A6D1EE /* FriendInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3300201E3F2F7700A6D1EE /* FriendInfo.swift */; };
 		3C3300231E3F2FFB00A6D1EE /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3300221E3F2FFB00A6D1EE /* FriendCell.swift */; };
+		3C3300261E401D5C00A6D1EE /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3300251E401D5C00A6D1EE /* UIColor.swift */; };
+		3C3300281E401F2000A6D1EE /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3300271E401F2000A6D1EE /* UIFont.swift */; };
+		3C33002A1E40270400A6D1EE /* AppUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3300291E40270400A6D1EE /* AppUtility.swift */; };
 		3C33FFE91E3F138600A6D1EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C33FFE81E3F138600A6D1EE /* AppDelegate.swift */; };
 		3C33FFF01E3F138600A6D1EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C33FFEF1E3F138600A6D1EE /* Assets.xcassets */; };
 		3C33FFF31E3F138600A6D1EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C33FFF11E3F138600A6D1EE /* LaunchScreen.storyboard */; };
@@ -49,6 +52,9 @@
 		3C33001E1E3F2F6F00A6D1EE /* FriendModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendModel.swift; sourceTree = "<group>"; };
 		3C3300201E3F2F7700A6D1EE /* FriendInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendInfo.swift; sourceTree = "<group>"; };
 		3C3300221E3F2FFB00A6D1EE /* FriendCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
+		3C3300251E401D5C00A6D1EE /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		3C3300271E401F2000A6D1EE /* UIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		3C3300291E40270400A6D1EE /* AppUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUtility.swift; sourceTree = "<group>"; };
 		3C33FFE51E3F138600A6D1EE /* Travel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C33FFE81E3F138600A6D1EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C33FFEF1E3F138600A6D1EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -105,6 +111,15 @@
 			name = FriendPage;
 			sourceTree = "<group>";
 		};
+		3C3300241E401D4F00A6D1EE /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3C3300251E401D5C00A6D1EE /* UIColor.swift */,
+				3C3300271E401F2000A6D1EE /* UIFont.swift */,
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
 		3C33FFDC1E3F138600A6D1EE = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +168,7 @@
 		3C33FFFB1E3F145100A6D1EE /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				3C3300241E401D4F00A6D1EE /* Extension */,
 				3C33FFFF1E3F15C200A6D1EE /* Utility */,
 				3C33FFFC1E3F147700A6D1EE /* UI */,
 			);
@@ -172,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				3C3300171E3F208800A6D1EE /* AppConstants.swift */,
+				3C3300291E40270400A6D1EE /* AppUtility.swift */,
 			);
 			name = Utility;
 			sourceTree = "<group>";
@@ -316,7 +333,10 @@
 				3C3300231E3F2FFB00A6D1EE /* FriendCell.swift in Sources */,
 				3C33001D1E3F2F4000A6D1EE /* FriendController.swift in Sources */,
 				3C3300071E3F171A00A6D1EE /* Nav1Controller.swift in Sources */,
+				3C3300261E401D5C00A6D1EE /* UIColor.swift in Sources */,
+				3C33002A1E40270400A6D1EE /* AppUtility.swift in Sources */,
 				3C33FFFE1E3F148900A6D1EE /* ViewController.swift in Sources */,
+				3C3300281E401F2000A6D1EE /* UIFont.swift in Sources */,
 				3C3300101E3F1C4800A6D1EE /* TravelController.swift in Sources */,
 				3C3300141E3F1E5600A6D1EE /* TravelInfo.swift in Sources */,
 				3C3300051E3F16AD00A6D1EE /* NavigationController.swift in Sources */,

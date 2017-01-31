@@ -7,15 +7,19 @@
 //
 
 import UIKit
+import MJRefresh
 
 class TravelController: ViewController {
     @IBOutlet weak var tableView: UITableView!
-    
     let model = TravelModel()
+    
+    var header : MJRefreshGifHeader!
+    var footer : MJRefreshAutoNormalFooter!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setRefresh()
         setTableView()
         getData()
     }
@@ -24,14 +28,41 @@ class TravelController: ViewController {
         super.didReceiveMemoryWarning()
     }
     
+    private func setRefresh() {
+        // refresh用headerの設定.
+        header = MJRefreshGifHeader(refreshingTarget: self, refreshingAction: #selector(getData))
+        header.setImages(AppUtility.getIdleImages(), for: .idle)
+        header.setImages(AppUtility.getPullingImages(), for: .pulling)
+        header.setImages(AppUtility.getRefreshingImages(), for: .refreshing)
+        self.tableView.mj_header = header
+        
+        // refresh用footerの設定.
+        footer = MJRefreshAutoNormalFooter(refreshingTarget: self, refreshingAction: #selector(getMoreData))
+        self.tableView.mj_footer = footer
+    }
+    
     private func setTableView() {
         tableView.tableFooterView = UIView()
         tableView.delegate = self
         tableView.dataSource = self
     }
     
-    private func getData() {
+    func getData() {
         model.getTravelInfos { msg in
+            header.endRefreshing()
+            footer.isHidden = false
+            if let errorMsg = msg {
+                print("error = \(errorMsg)")
+            }
+            
+            tableView.reloadData()
+        }
+    }
+    
+    func getMoreData() {
+        model.getMoreTravelInfos { (msg, isLastData) in
+            footer.endRefreshing()
+            footer.isHidden = isLastData
             if let errorMsg = msg {
                 print("error = \(errorMsg)")
             }
@@ -43,7 +74,7 @@ class TravelController: ViewController {
 
 extension TravelController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 228
+        return 234
     }
 }
 
