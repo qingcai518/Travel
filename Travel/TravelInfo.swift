@@ -9,19 +9,19 @@
 import Foundation
 
 class TravelInfo {
-    var travelId:  Int
+    var travelId : Int
     var userId: Int
     var destination : String
     var departure: String
     var travelDate: String
-    var description: String
-    var avatarUrl: String
+    var description : String
+    var avatarUrl : String
     var userName: String
     var gender : String
     var publishTime : String
-    var publishPlace: String
+    var publishPlace : String
     
-    init(travelId: Int, userId: Int, destination: String, departure: String, travelDate: String, description:String, avatarUrl: String, userName: String, gender: String, publishTime: String, publishPlace: String) {
+    init(travelId: Int, userId: Int, destination: String, departure: String, travelDate: String, description: String, avatarUrl: String, userName: String, gender: String, publishTime: String, publishPlace: String) {
         self.travelId = travelId
         self.userId = userId
         self.destination = destination

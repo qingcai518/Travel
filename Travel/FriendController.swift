@@ -102,12 +102,12 @@ extension FriendController : UICollectionViewDelegate {
 
 extension FriendController : UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let size = (screenWidth - 4 * 1) / 3
+        let size = (screenWidth - 4 * 4) / 3
         return CGSize(width: size, height: size)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsetsMake(1, 1, 0, 1)
+        return UIEdgeInsetsMake(4, 4, 0, 4)
     }
 }
 
