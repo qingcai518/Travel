@@ -33,23 +33,23 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="目的地" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rcE-mz-4iI">
-                                                    <rect key="frame" x="16" y="16" width="275" height="16"/>
+                                                    <rect key="frame" x="16" y="16" width="275" height="20"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="16" id="Ewh-PD-M2U"/>
+                                                        <constraint firstAttribute="height" constant="20" id="Ewh-PD-M2U"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
                                                     <color key="textColor" red="0.27388044779999998" green="0.49656568029999998" blue="0.74070512820000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar" translatesAutoresizingMaskIntoConstraints="NO" id="bHS-dB-Flo">
-                                                    <rect key="frame" x="16" y="40" width="16" height="16"/>
+                                                    <rect key="frame" x="16" y="44" width="16" height="16"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="16" id="VNk-5B-yrn"/>
                                                         <constraint firstAttribute="height" constant="16" id="eje-uY-Uat"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="旅行时间" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3zC-lt-dNJ">
-                                                    <rect key="frame" x="40" y="40" width="319" height="16"/>
+                                                    <rect key="frame" x="40" y="44" width="319" height="16"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="16" id="3Bc-dy-oVu"/>
                                                     </constraints>
@@ -58,7 +58,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="旅游详细" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="35s-yc-9I2">
-                                                    <rect key="frame" x="16" y="80" width="343" height="16.5"/>
+                                                    <rect key="frame" x="16" y="78" width="343" height="16.5"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -74,7 +74,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Uan-t0-qyA">
-                                                    <rect key="frame" x="16" y="128" width="40" height="40"/>
+                                                    <rect key="frame" x="16" y="132" width="40" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="40" id="IPJ-bD-k7V"/>
                                                         <constraint firstAttribute="height" constant="40" id="klm-tM-jPc"/>
@@ -87,27 +87,27 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="发布者" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0VC-IH-YDD">
-                                                    <rect key="frame" x="64" y="128" width="295" height="16.5"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                    <rect key="frame" x="64" y="132" width="295" height="14"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                                     <color key="textColor" red="0.27388044779999998" green="0.49656568029999998" blue="0.74070512820000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="female" translatesAutoresizingMaskIntoConstraints="NO" id="5a7-c6-kjB">
-                                                    <rect key="frame" x="64" y="152.5" width="16" height="16"/>
+                                                    <rect key="frame" x="64" y="154" width="16" height="16"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="16" id="Cye-IL-I5s"/>
                                                         <constraint firstAttribute="width" constant="16" id="Yj5-hj-Bw8"/>
                                                     </constraints>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location" translatesAutoresizingMaskIntoConstraints="NO" id="eaN-8d-UOz">
-                                                    <rect key="frame" x="16" y="184" width="16" height="16"/>
+                                                    <rect key="frame" x="16" y="188" width="16" height="16"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="16" id="BlO-PL-xK2"/>
                                                         <constraint firstAttribute="width" constant="16" id="xRS-qS-E2y"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="发布于" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4QX-6q-t57">
-                                                    <rect key="frame" x="40" y="184" width="319" height="16"/>
+                                                    <rect key="frame" x="40" y="188" width="319" height="16"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="16" id="3j6-w6-Mev"/>
                                                     </constraints>
@@ -130,7 +130,7 @@
                                                 <constraint firstItem="bHS-dB-Flo" firstAttribute="leading" secondItem="0Gd-Tl-FsG" secondAttribute="leading" constant="16" id="Cyo-Kf-t0W"/>
                                                 <constraint firstItem="0VC-IH-YDD" firstAttribute="top" secondItem="3zC-lt-dNJ" secondAttribute="bottom" constant="72" id="DZI-T2-3HG"/>
                                                 <constraint firstItem="3zC-lt-dNJ" firstAttribute="leading" secondItem="bHS-dB-Flo" secondAttribute="trailing" constant="8" id="EyX-Je-hup"/>
-                                                <constraint firstItem="35s-yc-9I2" firstAttribute="top" secondItem="3zC-lt-dNJ" secondAttribute="bottom" constant="24" id="GDr-8E-eqp"/>
+                                                <constraint firstItem="35s-yc-9I2" firstAttribute="top" secondItem="3zC-lt-dNJ" secondAttribute="bottom" constant="18" id="GDr-8E-eqp"/>
                                                 <constraint firstItem="rcE-mz-4iI" firstAttribute="leading" secondItem="0Gd-Tl-FsG" secondAttribute="leading" constant="16" id="M3j-JV-V2S"/>
                                                 <constraint firstAttribute="trailing" secondItem="u8p-6E-9Gi" secondAttribute="trailing" id="VMJ-Xx-j5Y"/>
                                                 <constraint firstItem="3zC-lt-dNJ" firstAttribute="top" secondItem="rcE-mz-4iI" secondAttribute="bottom" constant="8" id="XTP-8V-lQK"/>

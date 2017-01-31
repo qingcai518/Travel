@@ -124,6 +124,7 @@ extension FriendController : UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FriendCell", for: indexPath) as! FriendCell
         let info = model.friendInfos[indexPath.row]
         cell.avatarView.kf.setImage(with: URL(string: info.avatarUrl))
+        cell.genderView.image = UIImage(named: info.gender)
         cell.statusView.backgroundColor = UIColor.init(white: 0, alpha: 0.8)
         cell.statusView.isHidden = !info.isTravelling
         return cell

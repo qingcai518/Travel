@@ -74,7 +74,7 @@ class TravelController: ViewController {
 
 extension TravelController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 232
+        return 230
     }
 }
 
@@ -92,10 +92,12 @@ extension TravelController : UITableViewDataSource {
         let info = model.travelInfos[indexPath.row]
         
         cell.avatarView.kf.setImage(with: URL(string: info.avatarUrl))
+        cell.avatarView.layer.borderColor = UIColor.lightGray.cgColor
+        cell.avatarView.layer.borderWidth = 0.5
         cell.userNameLbl.text = info.userName
         cell.destinationLbl.text = info.destination
         cell.descriptionLbl.text = info.departure + " " + info.description
-        cell.genderView.image = info.gender == Female ? UIImage(named: "female") : UIImage(named: "male")
+        cell.genderView.image = UIImage(named: info.gender)
         cell.publishPlaceLbl.text = info.publishPlace
         cell.publishTimeLbl.text = info.publishTime
         cell.travelDateLbl.text = info.travelDate
